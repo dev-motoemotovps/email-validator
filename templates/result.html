@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222222;
+            color: #ffffff;
+        }
+
+        .container {
+            margin: 50px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #4285f4;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+
+        li {
+            margin: 5px 0;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: #333333;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Email Verification Result</h1>
+        <div class="card">
+            <p><strong>Score:</strong> {{ result.score }}</p>
+            <p><strong>Disposable:</strong> {{ result.disposable }}</p>
+            <p><strong>User:</strong> {{ result.user }}</p>
+            <p><strong>Domain:</strong> {{ result.domain }}</p>
+            <p><strong>Format Valid:</strong> {{ result.format_valid }}</p>
+            <p><strong>SMTP Check:</strong> {{ result.smtp_check }}</p>
+            <p><strong>Catch All:</strong> {{ result.catch_all }}</p>
+            <p><strong>Role:</strong> {{ result.role }}</p>
+            <p><strong>MX Records Found:</strong> {{ result.mx_found }}</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
